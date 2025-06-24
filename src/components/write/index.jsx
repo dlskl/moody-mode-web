@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./style.css";
 
 const emotions = [
-  { name: "슬픔", emotion: "src/assets/emotions/sad.png" },
-  { name: "기쁨", emotion: "src/assets/emotions/happy.png" },
-  { name: "지친", emotion: "src/assets/emotions/drained.png" },
-  { name: "피곤함", emotion: "src/assets/emotions/tired.png" },
-  { name: "보통", emotion: "src/assets/emotions/normal.png" },
+  { name: "슬픔", emotion: "/assets/emotions/sad.png" },
+  { name: "기쁨", emotion: "/assets/emotions/happy.png" },
+  { name: "지친", emotion: "/assets/emotions/drained.png" },
+  { name: "피곤함", emotion: "/assets/emotions/tired.png" },
+  { name: "보통", emotion: "/assets/emotions/normal.png" },
 ];
 
 
