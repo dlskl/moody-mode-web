@@ -1,0 +1,68 @@
+.insightbox-box {
+    width: 200px;
+    height: 60vh;
+    border-radius: 20px;
+    border: 3px solid #ffca4f;
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.insightbox-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 12px;
+}
+
+.insightbox-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 8px 0 6px 0;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.insightbox-explain {
+    font-size: 1.05rem;
+    text-align: center;
+    margin-bottom: 14px;
+    color: #222;
+}
+
+.insightbox-progress-bar {
+    width: 90%;
+    height: 16px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin: 8px 0 4px 0;
+    overflow: hidden;
+}
+
+.insightbox-progress {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.5s;
+}
+
+.insightbox-percent {
+    font-size: 1.1em;
+    margin-left: 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .insight-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .insightbox-box {
+        width: 90vw;
+        min-width: 0;
+    }
+}
