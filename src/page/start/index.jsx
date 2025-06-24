@@ -10,9 +10,10 @@ const StartPage = () => {
           나의 감정을 기록하고, 위로를 받는 한줄 감정일기
         </span>
         <img className="logo" src={logo} />
-        <span className="logo-text">모디모드</span>
-        <Link className="start-button">시작하기</Link>
-        {/* 후에 메인 화면으로 이동 */}
+        <span className="logo-text">무디모드</span>
+        <Link to="/main" className="start-button">
+          시작하기
+        </Link>
       </div>
     </div>
   );

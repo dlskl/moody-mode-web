@@ -1,0 +1,20 @@
+.logo-text {
+  font-size: 60px;
+  color: #533505;
+}
+
+#menu {
+  font-size: 30px;
+  color: #533505;
+  background-color: #ffd574;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
