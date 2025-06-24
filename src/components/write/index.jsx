@@ -9,11 +9,31 @@ const emotions = [
   { name: "보통", emotion: "src/assets/emotions/normal.png" },
 ];
 
+
 const Write = () => {
   const [selectedEmotion, setSelectedEmotion] = useState(null);
+  const [content, setContent] = useState("");
 
-  const handleSelect = (name) => {
-    setSelectedEmotion(name);
+  const handleSelect = (name) => setSelectedEmotion(name);
+
+  const handleSubmit = () => {
+    if (!selectedEmotion || !content.trim()) {
+      alert("감정과 내용을 모두 입력해주세요!");
+      return;
+    }
+    const emotionObj = emotions.find(e => e.name === selectedEmotion);
+    const diary = {
+      id: Date.now(),
+      date: new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" }),
+      emotion: selectedEmotion,
+      img: emotionObj.emotion,
+      content
+    };
+    const prev = JSON.parse(localStorage.getItem("diaries") || "[]");
+    localStorage.setItem("diaries", JSON.stringify([...prev, diary]));
+    setContent("");
+    setSelectedEmotion(null);
+    alert("일기가 저장되었습니다!");  
   };
 
   return (
@@ -22,9 +42,7 @@ const Write = () => {
         {emotions.map((emotion) => (
           <div
             key={emotion.name}
-            className={`emotions-wrap ${
-              selectedEmotion === emotion.name ? "selected" : ""
-            }`}
+            className={`emotions-wrap ${selectedEmotion === emotion.name ? "selected" : ""}`}
             onClick={() => handleSelect(emotion.name)}
           >
             <img
@@ -40,12 +58,14 @@ const Write = () => {
       <div className="write-textarea-container">
         <textarea
             className="write-textarea"
-            placeholder="오늘의 하루는 어땠는지 궁금해요!"/>
+            placeholder="오늘의 하루는 어땠는지 궁금해요!"
+            value={content}
+            onChange={e => setContent(e.target.value)}
+        />
         <div className="write-button-wrapper">
-        <div className="write-textarea-button">입력완료</div>
+          <div className="write-textarea-button" onClick={handleSubmit}>입력완료</div>
+        </div>
       </div>
-    </div>
-
     </>
   );
 };

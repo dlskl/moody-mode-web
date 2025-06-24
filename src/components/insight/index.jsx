@@ -1,5 +1,4 @@
 import "./style.css";
-import "./insightbox-style.css";
 
 const InsightBox = ({img, count, name, explain, percent, color}) => {
     return (
