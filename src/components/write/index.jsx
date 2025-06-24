@@ -29,7 +29,7 @@ const Write = () => {
         day: "numeric",
       }),
       emotion: selectedEmotion,
-      img: emotionObj.emotion,
+      img: `/emotions/${emotionObj.emotion.split('/').pop()}`,
       content,
     };
     const prev = JSON.parse(localStorage.getItem("diaries") || "[]");
