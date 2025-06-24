@@ -2,13 +2,12 @@ import { useState } from "react";
 import "./style.css";
 
 const emotions = [
-  { name: "슬픔", emotion: "/assets/emotions/sad.png" },
-  { name: "기쁨", emotion: "/assets/emotions/happy.png" },
-  { name: "지친", emotion: "/assets/emotions/drained.png" },
-  { name: "피곤함", emotion: "/assets/emotions/tired.png" },
-  { name: "보통", emotion: "/assets/emotions/normal.png" },
+  { name: "슬픔", emotion: "/emotions/sad.png" },
+  { name: "기쁨", emotion: "/emotions/happy.png" },
+  { name: "지친", emotion: "/emotions/drained.png" },
+  { name: "피곤함", emotion: "/emotions/tired.png" },
+  { name: "보통", emotion: "/emotions/normal.png" },
 ];
-
 
 const Write = () => {
   const [selectedEmotion, setSelectedEmotion] = useState(null);
@@ -21,19 +20,23 @@ const Write = () => {
       alert("감정과 내용을 모두 입력해주세요!");
       return;
     }
-    const emotionObj = emotions.find(e => e.name === selectedEmotion);
+    const emotionObj = emotions.find((e) => e.name === selectedEmotion);
     const diary = {
       id: Date.now(),
-      date: new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" }),
+      date: new Date().toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
       emotion: selectedEmotion,
       img: emotionObj.emotion,
-      content
+      content,
     };
     const prev = JSON.parse(localStorage.getItem("diaries") || "[]");
     localStorage.setItem("diaries", JSON.stringify([...prev, diary]));
     setContent("");
     setSelectedEmotion(null);
-    alert("일기가 저장되었습니다!");  
+    alert("일기가 저장되었습니다!");
   };
 
   return (
@@ -42,7 +45,9 @@ const Write = () => {
         {emotions.map((emotion) => (
           <div
             key={emotion.name}
-            className={`emotions-wrap ${selectedEmotion === emotion.name ? "selected" : ""}`}
+            className={`emotions-wrap ${
+              selectedEmotion === emotion.name ? "selected" : ""
+            }`}
             onClick={() => handleSelect(emotion.name)}
           >
             <img
@@ -57,13 +62,15 @@ const Write = () => {
 
       <div className="write-textarea-container">
         <textarea
-            className="write-textarea"
-            placeholder="오늘의 하루는 어땠는지 궁금해요!"
-            value={content}
-            onChange={e => setContent(e.target.value)}
+          className="write-textarea"
+          placeholder="오늘의 하루는 어땠는지 궁금해요!"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
         />
         <div className="write-button-wrapper">
-          <div className="write-textarea-button" onClick={handleSubmit}>입력완료</div>
+          <div className="write-textarea-button" onClick={handleSubmit}>
+            입력완료
+          </div>
         </div>
       </div>
     </>
