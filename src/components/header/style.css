@@ -3,7 +3,7 @@
   color: #533505;
 }
 
-#menu {
+.menu{
   font-size: 30px;
   color: #533505;
   background-color: #ffd574;
@@ -17,4 +17,8 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 10px;
+}
+
+.menu:hover {
+    background-color: #ffcc5c;
 }
