@@ -1,23 +1,29 @@
+/* 웹 폰트를 불러오는 설정 */
 @font-face {
-  font-family: "Ownglyph_meetme-Rg";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Ownglyph_meetme-Rg"; /* 사용할 폰트 이름 정의 */
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2") format("woff2");
+  /* 폰트 파일의 경로와 형식을 명시함. 이 경로에서 woff2 형식의 폰트를 가져옴 */
+  font-weight: normal; /* 기본 굵기 */
+  font-style: normal;  /* 기본 스타일 (이탤릭 아님) */
 }
 
+/* 웹 페이지 전체(body)에 적용되는 스타일 */
 body {
   font-family: "Ownglyph_meetme-Rg", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fffcf8;
+  /* Ownglyph_meetme-Rg 폰트를 기본으로, 만약 없으면 기본 sans-serif 사용 */
+  margin: 0; /* 바깥 여백 제거 */
+  padding: 0; /* 안쪽 여백 제거 */
+  background-color: #fffcf8; /* 전체 배경색: 아주 연한 베이지 색 (#fffcf8) */
 }
 
+/* 모든 링크(a 태그)와 link 태그에 적용되는 스타일 */
 a,
 link {
-  text-decoration: none;
+  text-decoration: none; /* 밑줄 제거 (기본 링크 스타일 제거) */
 }
 
+/* 텍스트 입력창(textarea)에 적용되는 스타일 */
 textarea {
   font-family: "Ownglyph_meetme-Rg", sans-serif;
+  /* 입력창에도 같은 폰트를 적용하여 전체 디자인 통일감 유지 */
 }
