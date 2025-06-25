@@ -1,8 +1,10 @@
+/* 로고 텍스트 */
 .logo-text {
   font-size: 60px;
   color: #533505;
 }
 
+/* 메뉴 스타일 */
 .menu{
   font-size: 30px;
   color: #533505;
@@ -12,6 +14,7 @@
   border-radius: 10px;
 }
 
+/* 헤더 컨테이너 */
 .header-container {
   display: flex;
   align-items: center;
@@ -19,6 +22,7 @@
   margin: 0 10px;
 }
 
+/* 메뉴 호버 효과 */
 .menu:hover {
     background-color: #ffcc5c;
 }

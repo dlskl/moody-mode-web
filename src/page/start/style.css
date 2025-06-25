@@ -1,3 +1,4 @@
+/* 배경 */
 .background {
   width: 100vw;
   height: 100vh;
@@ -6,6 +7,7 @@
   align-items: center;
 }
 
+/* 내용 컨테이너 */
 .content-container {
   display: flex;
   flex-direction: column;
@@ -14,21 +16,25 @@
   gap: 20px;
 }
 
+/* 소개 텍스트 */
 .introduce-text {
   font-size: 40px;
   color: #533505;
   text-align: center;
 }
 
+/* 로고 이미지 */
 .logo {
   width: 218px;
   height: 271px;
 }
 
+/* 로고 텍스트 */
 .logo-text {
   font-size: 60px;
   color: #533505;
 }
+/* 시작 버튼 */
 .start-button {
   width: 240px;
   height: 50px;
@@ -43,6 +49,7 @@
   margin-top: 20px;
 }
 
+/* 시작 버튼 호버 */
 .start-button:hover {
   background-color: #ffcc5c;
 }

@@ -1,19 +1,23 @@
+/* 감정 이미지 */
 .emotion-img {
   width: 200px;
   height: auto;
 }
 
+/* 감정 텍스트 */
 .emotion-text {
   font-size: 30px;
   margin-left: 35%;
   color: #646e78;
 }
 
+/* 선택지 컨테이너 */
 .choice-container {
   display: flex;
   justify-content: space-evenly;
 }
 
+/* 감정 선택 래퍼 */
 .emotions-wrap {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   cursor: pointer;
 }
 
+/* 선택된 감정 */
 .emotions-wrap.selected {
   background-color: #ffd574;
   div {
@@ -29,10 +34,12 @@
   }
 }
 
+/* 작성 컨테이너 */
 .write-container {
   display: flex;
   justify-content: center;
 }
+/* 일기 입력란 컨테이너 */
 .write-textarea-container {
   width: 800px;
   margin: 0 auto;
@@ -40,6 +47,7 @@
   flex-direction: column;
 }
 
+/* 일기 입력란 */
 .write-textarea {
   width: 100%;
   height: 150px;
@@ -53,12 +61,14 @@
   margin-top: 50px;
 }
 
+/* 버튼 래퍼 */
 .write-button-wrapper {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
 }
 
+/* 일기 입력 버튼 */
 .write-textarea-button {
   width: 100px;
   height: 40px;

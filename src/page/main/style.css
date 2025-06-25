@@ -1,12 +1,15 @@
+/* 오늘의 텍스트 */
 .today-text {
   font-size: 30px;
 }
 
+/* 오늘의 감정 */
 .today-feeling {
   font-size: 50px;
   margin-top: 30px;
 }
 
+/* 도움말 */
 .help-word {
   font-size: 18px;
 }

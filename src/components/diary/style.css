@@ -1,3 +1,4 @@
+/* 일기 내용 박스 */
 .diary-content {
   width: 80%;
   height: fit-content;
@@ -11,10 +12,12 @@
   gap: 30px;
 }
 
+/* 일기 텍스트 */
 .content-text {
   font-size: 24px;
 }
 
+/* 감정 이미지 크기 */
 .emotion-img-size {
   width: 120px;
   height: auto;

@@ -12,12 +12,14 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
+/* 통계의 감정 이미지 */
 .insightbox-img {
     width: 90px;
     height: 90px;
     margin-bottom: 12px;
 }
 
+/* 통계 제목 */
 .insightbox-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -26,6 +28,7 @@
     text-align: center;
 }
 
+/* 통계 설명 */
 .insightbox-explain {
     font-size: 1.05rem;
     text-align: center;
@@ -33,6 +36,7 @@
     color: #222;
 }
 
+/* 진행 바 */
 .insightbox-progress-bar {
     width: 90%;
     height: 16px;
@@ -42,12 +46,14 @@
     overflow: hidden;
 }
 
+/* 진행 바 내부 */
 .insightbox-progress {
     height: 100%;
     border-radius: 8px;
     transition: width 0.5s;
 }
 
+/* 퍼센트 표시 */
 .insightbox-percent {
     font-size: 1.1em;
     margin-left: 6px;
@@ -55,6 +61,7 @@
     color: #555;
 }
 
+/* 반응형 레이아웃 */
 @media (max-width: 900px) {
     .insight-container {
         flex-direction: column;
