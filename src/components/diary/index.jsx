@@ -1,3 +1,5 @@
+import "./style.css"
+
 // Diary 컴포넌트를 정의 props로 날짜(date), 내용(content), 이미지(img)를 전달받음
 const Diary = ({ date, content, img }) => {
   return (
